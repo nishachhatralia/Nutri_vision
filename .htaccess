@@ -1,0 +1,25 @@
+# =============================================================
+#  Protect sensitive files from public access
+# =============================================================
+
+# Block access to .env files
+<FilesMatch "^\.env">
+    Require all denied
+</FilesMatch>
+
+# Block access to service account JSON
+<FilesMatch "firebase-service-account\.json$">
+    Require all denied
+</FilesMatch>
+
+# Block access to log files
+<FilesMatch "\.log$">
+    Require all denied
+</FilesMatch>
+
+# Block access to the config directory
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteRule ^config/ - [F,L]
+    RewriteRule ^logs/ - [F,L]
+</IfModule>
