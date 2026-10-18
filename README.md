@@ -1,4 +1,4 @@
-# NutriVision AI 🥗
+# NutriVision 🥗
 
 NutriVision AI is a nutrition and diet-tracking web app that pairs a **PHP/MySQL** frontend with a **Python (Flask) AI backend**. It lets users log meals (manually or via AI food-image detection), track water intake and goals, get AI-generated diet plans and nutrition insights, and receive meal-reminder push notifications.
 
